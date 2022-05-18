@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https: //fonts.googleapis.com/css2? family= Open+Sans:wght@300 & display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+		@import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@300 & display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Open Sans', sans-serif;
+		}
+		:root {
+			--soft-blue: hsl(215, 51%, 70%);
+			--cyan: hsl(178, 100%, 50%);
+			--dBMain: hsl(217, 54%, 11%);
+			--dBCard: hsl(216, 50%, 16%);
+			--dBLine: hsl(215, 32%, 27%);
+			--white: hsl(0, 0%, 100%);
+		}
+		.tela {
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--dBMain);
+		}
+		.container {
+			background-color: var(--dBCard);
+			padding: 17px;
+			width: 300px;
+			border-radius: 20px;
+			box-shadow: 20px 20px 10px rgba(0,0,0,0.4), -20px 20px 10px rgba(0,0,0,0.4);
+		}
+		#imagem-equilibrium {
+			display: block;
+			width: 266px;
+			position: absolute;
+		}
+		.container-imagem {
+			position: relative;
+			width: 266px;
+			height: 266px;
+		}
+		.container-icon-view {
+			position: absolute;
+			background-color: hsl(178, 100%, 50%, 60%);
+			opacity: 0;
+			width: 266px;
+			height: 266px;
+		}
+		#icon-view {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.container-icon-view:hover {
+			opacity: 1;
+			cursor: pointer;
+			z-index: 999;
+		}
+		.titulo {
+			color: white;
+			margin-top: 20px;
+		}
+		.titulo:hover, #jules-wyvern:hover {
+			color: var(--cyan);
+			cursor: pointer;
+		}
+		.paragrafo {
+			color: var(--soft-blue);
+			margin-top: 20px;
+		}
+		.dados {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		#ethereum {
+			color: var(--cyan);
+			font-weight: 300;
+		}
+		#dias, #creation-of {
+			color: var(--soft-blue);
+		}
+		#jules-wyvern {
+			color: var(--white);
+		}
+		#jules {
+			width: 30px;
+			border: 0.2px solid white;
+			border-radius: 50%;
+		}
+		.jules {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 30px 0px;
+			width: 250px;
+			border-top: 0.1px solid var(--dBLine);
+		}
+		.ethereum, .dias {
+			display: flex;
+			align-items: center;
+		}
+  </style>
+</head>
+<body>
+  <div class="tela">
+    <div class="cor-de-fundo">
+      <div class="container">
+		<figure class="container-imagem">
+			<img src="images/image-equilibrium.jpg" alt="Equilibrium" id="imagem-equilibrium">
+			<div class="container-icon-view">
+				<img src="images/icon-view.svg" alt="View" id="icon-view">
+			</div>
+	    </figure>
+		<h3 class="titulo">Equilibrium #3429</h3>
+        <p class="paragrafo">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="dados">
+          <div class="ethereum"><img src="images/icon-ethereum.svg"><span style="margin-left:5px;" id="ethereum">0.041 ETH</span></div>
+          <div class="dias"><img src="images/icon-clock.svg"><span id="dias" style="margin-left:5px;">3 days left</span></div>
+        </div>
+        <div class="jules">
+          <img src="images/image-avatar.png" alt="Jules Wyvern"  id="jules">
+          <p id="creation-of">Creation of <span id="jules-wyvern"> Jules Wyvern</span></p>
+        </div>
+	  </div>
+    </div>
+  </div>
+</body>
+</html>
